@@ -1,0 +1,76 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 2,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Actualizacion de Celulares",
+                            "weight": "bolder",
+                            "size": "medium"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Por favor Actualiza los siguientes datos:",
+                            "isSubtle": true,
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Nombre",
+                            "wrap": true
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "Name",
+                            "placeholder": "John Andersen"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Puesto",
+                            "wrap": true
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "Url",
+                            "placeholder": " Preventa Colab / AM "
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Numero de Celular"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "Tel",
+                            "placeholder": "408 526 7209",
+                            "style": "Tel"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 1,
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://www.zocalo.com.mx/images/sized/images/uploads/articles/telefono-numero-621x354.jpg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit"
+        }
+    ]
+}
