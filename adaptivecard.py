@@ -5,6 +5,15 @@ from webexteamssdk import *
 from flask import Flask, request
 app = Flask(__name__)
 
+'''
+For prototyping, we use ngrok.
+We'll request the tunnel and parse the url to use for a webhook
+'''
+tunnel = json.loads(
+    requests.request('GET', url='http://localhost:4040/api/tunnels'
+                     ).text
+)
+public_url = tunnel['tunnels'][0]['public_url']
 
 '''
 Specify the webex token and roomId to use
@@ -29,7 +38,7 @@ for webhook in wbx.webhooks.list():
 
 wbx.webhooks.create(
     name='Development - ngrok',
-    targetUrl='https://adaptuvecardweex.herokuapp.com',
+    targetUrl=public_url,
     resource='attachmentActions',
     event='created'
 )
@@ -68,4 +77,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(port=5000, use_reloader=True)
+    app.run(port=3000, use_reloader=True)
