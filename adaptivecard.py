@@ -9,7 +9,7 @@ app = Flask(__name__)
 '''
 Specify the webex token and roomId to use
 '''
-token = 'Y2M0MTg0NzQtNmI4Yy00NjZlLThiOGUtMTY3YWUxNGM1M2I4N2RhOTZlNmQtZGYz_PF84_3c801018-052a-4f7e-b2a3-d527f6768f3e'
+token = 'NTNmYjNmNjItZDM2NS00ZjZiLTg3MDgtZThiYTIwNzUyOWRmNGNiZWU5NjYtZjVh_PF84_3c801018-052a-4f7e-b2a3-d527f6768f3e'
 roomId = 'Y2lzY29zcGFyazovL3VzL1JPT00vYTVmYjAyMjAtNTk4My0xMWVhLWJlMmUtMjNjNjRmZDcyYTQ4'
 
 '''
