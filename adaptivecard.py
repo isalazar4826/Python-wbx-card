@@ -29,7 +29,7 @@ for webhook in wbx.webhooks.list():
 
 wbx.webhooks.create(
     name='Development - ngrok',
-    targetUrl=public_url,
+    targetUrl='https://adaptuvecardweex.herokuapp.com',
     resource='attachmentActions',
     event='created'
 )
