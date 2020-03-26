@@ -10,7 +10,7 @@ For prototyping, we use ngrok.
 We'll request the tunnel and parse the url to use for a webhook
 '''
 tunnel = json.loads(
-    requests.request('GET', url='http://localhost:4040/api/tunnels'
+    requests.request('GET', url='https://adaptuvecardweex.herokuapp.com/'
                      ).text
 )
 public_url = tunnel['tunnels'][0]['public_url']
