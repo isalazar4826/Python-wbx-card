@@ -1,1 +1,1 @@
-web: python adaptivecard.py
+web:python adaptivecard.py
