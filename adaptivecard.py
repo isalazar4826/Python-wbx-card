@@ -7,6 +7,17 @@ app = Flask(__name__)
 
 
 '''
+For prototyping, we use ngrok.
+We'll request the tunnel and parse the url to use for a webhook
+'''
+tunnel = json.loads(
+    requests.request('GET', url='https://adaptuvecardweex.herokuapp.com'
+                     ).text
+)
+public_url = tunnel['tunnels'][0]['public_url']
+
+
+'''
 Specify the webex token and roomId to use
 '''
 token = 'OWM2MzMxZDctNTFmZS00NWE1LTg3MTktYTUxMzkzMGJlYmFmOGZlZjRiZDUtNzUx_PF84_3c801018-052a-4f7e-b2a3-d527f6768f3e'
@@ -29,7 +40,7 @@ for webhook in wbx.webhooks.list():
 
 wbx.webhooks.create(
     name='Development - heroku',
-    targetUrl='https://adaptuvecardweex.herokuapp.com',
+    targetUrl=public_url,
     resource='attachmentActions',
     event='created'
 )
