@@ -28,7 +28,7 @@ for webhook in wbx.webhooks.list():
     wbx.webhooks.delete(webhook.id)
 
 wbx.webhooks.create(
-    name='Development - ngrok',
+    name='Development - heroku',
     targetUrl='https://adaptuvecardweex.herokuapp.com',
     resource='attachmentActions',
     event='created'
